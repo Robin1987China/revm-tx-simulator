@@ -1,0 +1,35 @@
+{
+  "_comment": "Real mainnet PYUSD transfer, replayed from block 26144826. Run: revm-txsim run --input examples/erc20-transfer-pyusd.json",
+  "rpc_url": "https://eth.drpc.org",
+  "block": 26144826,
+  "state_block": null,
+  "spec": null,
+  "tx": {
+    "hash": "0x5baf68955196a32b5a1381296a204db26a004bf67037a0010fdfc78c63b6cfe7",
+    "from": "0xe087b373762efe6f2942ab93f4986df9778c66a4",
+    "to": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+    "value": "0x0",
+    "data": "0xa9059cbb00000000000000000000000085f0539ee2fc22a76ebc69e694d595393f3a3925000000000000000000000000000000000000000000000000000000000037656c",
+    "nonce": 0,
+    "gas_limit": "0xe583",
+    "gas_price": "0x8e043fb2",
+    "max_fee_per_gas": "0x8ff93256",
+    "max_priority_fee_per_gas": "0x858c664c",
+    "chain_id": 1,
+    "tx_type": 2,
+    "blob_hashes": null,
+    "max_fee_per_blob_gas": null
+  },
+  "expect": {
+    "status": true,
+    "gas_used": "0xbdc0",
+    "block_number": 26144826,
+    "from": "0xe087b373762efe6f2942ab93f4986df9778c66a4",
+    "to": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+    "logs_count": 1
+  },
+  "erc20_balance_slots": {
+    "0x6c3ea9036406852006290770bedfcaba0e23a0e8": 1
+  },
+  "watch_addresses": []
+}

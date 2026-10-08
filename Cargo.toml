@@ -1,0 +1,20 @@
+[package]
+name = "revm-txsim"
+version = "0.1.0"
+edition = "2021"
+description = "Local transaction simulator built on revm: replay a tx against real chain state and diff storage / ETH / ERC20 balances."
+publish = false
+
+[[bin]]
+name = "revm-txsim"
+path = "src/main.rs"
+
+[dependencies]
+# EVM execution engine. We keep the feature set small on purpose (no C-backed
+# KZG / blst precompiles) so the crate builds fast and without a C toolchain.
+revm = { version = "43.0.3", default-features = false, features = ["std", "secp256k1"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+ureq = { version = "2", features = ["json"] }
+
+[dev-dependencies]
